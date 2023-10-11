@@ -17,6 +17,9 @@ const authentication = require('./middlewares/auth.middleware');
 const userRoutes = require('./routes/user.routes');
 
 
+
+
+
 // Middlewares routes
 const notFoundMiddleware = require('./middlewares/not-found.middleware');
 const errorHandlerMiddleware = require('./middlewares/error-handler.middleware');
@@ -32,7 +35,8 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(cors());
 app.use(morgan('dev'));
-
+// Welcome Message 
+// router.get('/', {message: "Welcome to Swabhimaan"})
 // routes
 app.use('/api/v1/users', userRoutes);
 
